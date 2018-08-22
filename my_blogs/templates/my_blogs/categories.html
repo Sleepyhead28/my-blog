@@ -1,0 +1,14 @@
+{% extends "my_blogs/base.html" %}
+
+{% block content %}
+  <p>Categories</p>
+
+  <ul>
+    {% for category in categories %}
+      <li>{{ category }}</li>
+    {% empty %}
+      <li>No categories have been added yet.</li>
+    {% endfor %}
+  </ul>
+
+{% endblock content %}
